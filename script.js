@@ -6,3 +6,8 @@ $(document).ready(function () {
 
 
 })
+
+var APIKey="16b5177dc1a814042da65ece74800fb0";
+var city="London";
+var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+console.log(queryURL);
