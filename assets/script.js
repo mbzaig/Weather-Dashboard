@@ -7,7 +7,7 @@ $(document).ready(function () {
 
 })
 
-var APIKey = "16b5177dc1a814042da65ece74800fb0";
+var APIKey = weatherApi;
 // var city="Manchester";
  
 // console.log("Queries 5 Day data" + queryURL5Day);
