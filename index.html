@@ -46,20 +46,33 @@
         <section id="today" class="mt-3" role="region" aria-live="polite">
           <h2>Current Weather:</h2>
           <div id="current-weather">
-            <p id="city-name"></p>
-            <p id="date"></p>
-            <img id="icon" src="" alt="Weather Icon">
-            <p id="temperature"></p>
-            <p id="humidity"></p>
-            <p id="wind-speed"></p>
           </div>
 
         </section>
       </div>
-      <section id="forecast" class="row mt-3" role="region" aria-live="polite"></section>
     </div>
+  
+
+  <div class="row col-lg-12 pb-3">
+    <section id="forecast" class="row mt-3" role="region" aria-live="polite">
+
+      <h2>5-Day Forecast:</h2>
+      <!-- <p id="city-forecast"></p>
+      <div id="forecast-container"></div> -->
+
+    </section>
+    </div>
+    <div class="row col-lg-9 pb-3">
+      
+        <section id="search-history" class="row mt-3" role="region" aria-live="polite">
+        <h2>Search History:</h2>
+        <ul id="history"></ul>
+      </section>
+    </div>
+
   </div>
-  </div>
+  
+
 
   <!-- Moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
