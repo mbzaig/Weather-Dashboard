@@ -59,6 +59,6 @@ function validCity(e) {
 
 function displayItems(city, data){
  current(city, data.list[0]);
- forecast(data.list);
+ forecast(city, data.list);
     
 }
