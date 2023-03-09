@@ -78,7 +78,7 @@ function current(place, info) {
     var temp = $("<p>").text("Temperature: " + info.main.temp + " °C");
     var humidity = $("<p>").text("Humidity: " + info.main.humidity + "%");
     var windSpeed = $("<p>").text("Wind Speed: " + info.wind.speed + " m/s");
-
+    
     // Clear the current weather div and add the new content
     $("#current-weather").empty();
     $("#current-weather")
@@ -87,6 +87,7 @@ function current(place, info) {
         .append(temp)
         .append(humidity)
         .append(windSpeed);
+       
 }
 
 
@@ -120,4 +121,33 @@ function forecast(place, info) {
             $("#forecast").append(card);
         }
     }
+   
+    updateSearchHistory(city);
+}
+
+
+var searchHistory = [];
+
+let historyE1;
+// Function to update the search history
+function updateSearchHistory(city) {
+    console.log("function called")
+    console.log("search="+searchHistory);
+  // Check if the city is already in the search history
+  if (!searchHistory.includes(city)) {
+    console.log("search="+searchHistory);
+    // Add the city to the search history array
+    searchHistory.push(city);
+    console.log("search="+searchHistory);
+
+    let btn = document.createElement("button");
+btn.innerHTML = city;
+document.body.appendChild(btn);
+
+    
+    // Create a new button element for the city and add it to the search history
+    
+    // Save the search history to local storage
+    localStorage.setItem(city, JSON.stringify(searchHistory));
+  }
 }
